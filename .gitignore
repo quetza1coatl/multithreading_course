@@ -1,0 +1,16 @@
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+#IDE and output files
+.idea/
+*.iml
+target/
+out/
+
+# Package Files #
+*.jar
+*.war
+
