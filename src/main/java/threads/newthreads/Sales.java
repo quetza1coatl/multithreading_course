@@ -1,4 +1,4 @@
-package threads.main;
+package threads.newthreads;
 
 public class Sales {
     private static int[] salesByDay = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
@@ -8,7 +8,8 @@ public class Sales {
         int endDay =  Integer.parseInt(args[1]);
 
         Sales sales = new Sales();
-        sales.calculateTotal(startDay, endDay);
+        Thread thread = new Thread(() -> sales.calculateTotal(startDay, endDay),"calculation-thread");
+        thread.start();
 
     }
 
@@ -19,5 +20,8 @@ public class Sales {
         }
         System.out.println("Total sales are: " + salesForPeriod
                 + ", start day is " + startDay + ", end day is " + endDay);
+
+        Thread current = Thread.currentThread();
+        System.out.println(String.format("Thread name: %s%nThread id: %d", current.getName(), current.getId()));
     }
 }
