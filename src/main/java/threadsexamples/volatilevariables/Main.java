@@ -1,4 +1,4 @@
-package threads.volatilevariables;
+package threadsexamples.volatilevariables;
 
 import java.util.HashSet;
 import java.util.Set;

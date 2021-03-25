@@ -1,4 +1,4 @@
-package threads.synchronization;
+package threadsexamples.happensbefore;
 
 import java.time.LocalDateTime;
 
@@ -41,16 +41,21 @@ public class Sales {
 
     }
 
+    // guarantee for 'happens before' relationships, when we will try to read values
+    synchronized public long getTotalSales() {
+        return totalSales;
+    }
+
     private void createBackup() {
-        while (!Thread.currentThread().isInterrupted()) {
+        while (true) {
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
-                System.out.println("The backup thread is interrupted");
-                return;
+                Thread.currentThread().interrupt();
             }
 
             // writing data into the file...
+            System.out.println("Total sales the backup value is: " + getTotalSales());
 
             System.out.println(LocalDateTime.now() + " the backup has created");
             if (Thread.currentThread().isInterrupted()) {

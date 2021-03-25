@@ -1,4 +1,4 @@
-package threads.locksgranularity;
+package threadsexamples.locksgranularity;
 
 import java.time.LocalDateTime;
 

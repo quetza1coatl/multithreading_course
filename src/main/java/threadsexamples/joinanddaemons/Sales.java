@@ -1,4 +1,4 @@
-package threads.joinanddaemons;
+package threadsexamples.joinanddaemons;
 
 import java.time.LocalDateTime;
 

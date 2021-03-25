@@ -1,4 +1,4 @@
-package threads.interrupt;
+package threadsexamples.interrupt;
 
 import java.time.LocalDateTime;
 

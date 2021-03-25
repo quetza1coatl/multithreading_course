@@ -1,4 +1,4 @@
-package threads.threadlocal;
+package threadsexamples.threadlocal;
 
 public class ThreadLocalExample {
 

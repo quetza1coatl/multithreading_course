@@ -1,4 +1,4 @@
-package threads.atomics;
+package threadsexamples.atomics;
 
 import java.util.HashSet;
 import java.util.Set;
